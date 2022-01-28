@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { ObjectId } = mongoose.Schema;
+
 
 const UserSchema = new mongoose.Schema(
     {
@@ -19,11 +19,7 @@ const UserSchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
-        movie: {
-			type: ObjectId,
-			ref: 'Movie',
-			required: true,
-		},
+    
     },
     { timestamps: true }
 );
