@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../redux/actions/productActions";
 import { getCategories } from "../redux/actions/categoryActions";
 import { getProductsByFilter } from "../redux/actions/filterActions";
-import Card from "./Card";
+import Card from "./MovieCard";
 
 const Shop = () => {
   const [text, setText] = useState("");

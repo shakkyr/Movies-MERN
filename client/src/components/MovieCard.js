@@ -7,7 +7,7 @@ import { addToFavorite } from '../redux/actions/favoriteActions';
 
 const imageUrl = "https://image.tmdb.org/t/p/original";
 
-const Card = ({ movie, adminPage = false, homePage = false }) => {
+const MovieCard = ({ movie, adminPage = false, homePage = false }) => {
 	const dispatch = useDispatch();
 
 	const handleAddToFavorite = () => {
@@ -68,4 +68,22 @@ const Card = ({ movie, adminPage = false, homePage = false }) => {
 	);
 };
 
-export default Card;
+export default MovieCard;
+
+// import React from 'react';
+
+// const MovieCard = ({movies}) => {
+// 	const imageUrl = "https://image.tmdb.org/t/p/original";
+//   return(
+// 	  <>
+// 		  {movies.map((ele, index) =>(
+// 			  <div className="d-flex justify-content-start m-3" >
+// 			     <img src={`${imageUrl}${ele.poster_path}`} alt="movie"></img>
+// 			  </div>
+// 		  ))}
+// 	  </>
+
+//   );
+// };
+
+// export default MovieCard;

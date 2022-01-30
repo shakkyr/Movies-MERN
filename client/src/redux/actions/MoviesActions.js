@@ -13,12 +13,45 @@ const movieUrl = `${url}/movie`;
 const genreUrl = `${url}/genre/movie/list`;
 const moviesUrl = `${url}/discover/movie`;
 const personUrl = `${url}/trending/person/week`;
+const searchUrl = `${url}/search/movie`;
 
 
 export const getMovies = () => async dispatch =>{
     try {
         dispatch({ type: START_LOADING });
-        const response = await axios.get(`${url}/discover/movie?api_key=0e0361a1e4feb360695e2fc32793d846&language=en-US&sort_by=popularity.desc&page=1`)
+        
+        const response = await axios.get(nowPlayingUrl, {
+            params: {
+                api_key: apiKey,
+                language: 'en_US',
+                sort_by:"popularity.desc" ,
+                page: 1
+            }
+        })
+        dispatch({ type: STOP_LOADING });
+        dispatch({type: SHOW_SUCCESS_MESSAGE, payload: response.data.successMessage,});
+        dispatch({type: GET_NOW_PLAYING,	payload: response.data.results,});
+
+    } catch (err) {
+		console.log('getting mow playing movies api error: ', err);
+		dispatch({ type: STOP_LOADING });
+		dispatch({
+			type: SHOW_ERROR_MESSAGE,
+			payload: err.response.data.errorMessage,
+		});
+	}
+}
+export const getSearchedMovies = () => async dispatch =>{
+    try {
+        dispatch({ type: START_LOADING });
+        const response = await axios.get(searchUrl, {
+            params: {
+                api_key: apiKey,
+                language: 'en_US',
+                sort_by:"popularity.desc" ,
+                page: 1
+            }
+        });
         dispatch({ type: STOP_LOADING });
         dispatch({type: SHOW_SUCCESS_MESSAGE, payload: response.data.successMessage,});
         dispatch({type: GET_NOW_PLAYING,	payload: response.data.results,});

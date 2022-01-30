@@ -1,3 +1,9 @@
+body {
+	background : #141414;
+	color:aliceblue;
+}
+
+
 .signup-container {
 	background-image: url('/images/img-signup-bkg.jpg');
 	background-size: cover;
@@ -25,4 +31,9 @@
 	background-position: center;
 	opacity: 1;
 	height: 60%;
+}
+
+.movie-app > .row {
+	overflow-x:auto;
+	flex-wrap: nowrap;
 }

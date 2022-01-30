@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import Card from './MovieCard';
 // redux
 import { useSelector } from 'react-redux'; //! selector helps us to pull state properties from redux
 
