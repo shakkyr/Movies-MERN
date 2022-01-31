@@ -1,5 +1,5 @@
 {
-	"name": "Movie Database",
+	"name": "movie-database",
 	"version": "1.0.0",
 	"description": "Movie Database -MERN",
 	"main": "server.js",
