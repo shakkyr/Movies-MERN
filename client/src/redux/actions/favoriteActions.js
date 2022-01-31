@@ -17,7 +17,7 @@ export const addToFavorite = movie => async dispatch => {
 			count: 1,
 		};
 
-		// add product data to favorite
+		// add movie data to favorite
 		favorite.push(movieToAdd);
 
 		// add favorite to local storage

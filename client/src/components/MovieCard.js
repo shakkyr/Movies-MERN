@@ -15,7 +15,7 @@ const MovieCard = ({ movie, adminPage = false, homePage = false }) => {
 	};
 
 	return (
-		<div className='col-md-2 my-3 big-card'>
+		<div className='col-md-3 my-3 big-card'>
 			<div className='card h-100'>
 			<Link to={`/movie/${movie.id}`}>
 					<img
@@ -58,7 +58,7 @@ const MovieCard = ({ movie, adminPage = false, homePage = false }) => {
 								disabled={movie.title}
 								onClick={handleAddToFavorite}
 							>
-								Add to Favorite
+							 <i class="fas fa-heart" style={{color:'red'}}></i>	Add to Favorite
 							</button>
 						</>
 					)}

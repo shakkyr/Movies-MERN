@@ -8,7 +8,7 @@ import productReducer from './reducers/productReducers';
 import filterReducer from './reducers/filterReducers';
 import favoriteReducer from './reducers/favoriteReducers';
 import movieListReducer from './reducers/moviesReducers';
-import searchedMoviesReducers from './reducers/moviesReducers';
+// import searchedMoviesReducers from './reducers/moviesReducers';
 
 const reducer = combineReducers({
 	loading: loadingReducer,
