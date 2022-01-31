@@ -37,3 +37,21 @@ body {
 	overflow-x:auto;
 	flex-wrap: nowrap;
 }
+
+.card-body {
+	background-color: #1d2124;
+}
+
+.big-card {
+	position: relative;
+	transition: transform 0.2s;
+}
+
+.big-card:hover {
+	transform:scale(1.02);
+}
+
+
+.movie-rows::-webkit-scrollbar {
+	display: none;
+}

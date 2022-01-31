@@ -15,12 +15,12 @@ const MovieCard = ({ movie, adminPage = false, homePage = false }) => {
 	};
 
 	return (
-		<div className='col-md-4 my-3'>
+		<div className='col-md-2 my-3 big-card'>
 			<div className='card h-100'>
 			<Link to={`/movie/${movie.id}`}>
 					<img
 						className='img-fluid w-100'
-						src={`${imageUrl}${movie.poster_path}`}
+						src={movie.poster_path? `${imageUrl}${movie.poster_path}` :'https://conversationsabouther.net/wp-content/uploads/2015/07/empty-cinema.jpg' }
 						alt='movie'
 					/>
 				</Link>

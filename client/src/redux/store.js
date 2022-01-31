@@ -7,7 +7,8 @@ import categoryReducer from './reducers/categoryReducers';
 import productReducer from './reducers/productReducers';
 import filterReducer from './reducers/filterReducers';
 import favoriteReducer from './reducers/favoriteReducers';
-import nowPlayingReducers from './reducers/moviesReducers';
+import movieListReducer from './reducers/moviesReducers';
+import searchedMoviesReducers from './reducers/moviesReducers';
 
 const reducer = combineReducers({
 	loading: loadingReducer,
@@ -16,7 +17,7 @@ const reducer = combineReducers({
 	products: productReducer,
 	filters: filterReducer,
 	favorite: favoriteReducer,
-	nowPlaying : nowPlayingReducers,
+	movieList : movieListReducer,
 });
 
 const initialState = {};

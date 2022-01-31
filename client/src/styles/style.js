@@ -10,7 +10,8 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 opacity: 1;
-height: 60%;
+height: 50%;
+background-size: 45% 100%;
 `;
 
 

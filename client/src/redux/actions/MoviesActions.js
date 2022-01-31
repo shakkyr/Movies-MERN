@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { START_LOADING, STOP_LOADING } from '../constants/loadingConstants';
 import {SHOW_ERROR_MESSAGE,	SHOW_SUCCESS_MESSAGE,} from '../constants/messageConstants';
-import {GET_NOW_PLAYING} from '../constants/moviesConstants';
+import {GET_NOW_PLAYING,GET_SEARCHED_MOVIES} from '../constants/moviesConstants';
 
 
 
@@ -41,23 +41,26 @@ export const getMovies = () => async dispatch =>{
 		});
 	}
 }
-export const getSearchedMovies = () => async dispatch =>{
+export const getSearchedMovies = (searchFor) => async dispatch =>{
     try {
+        console.log('searchFor',searchFor);
         dispatch({ type: START_LOADING });
         const response = await axios.get(searchUrl, {
             params: {
                 api_key: apiKey,
                 language: 'en_US',
                 sort_by:"popularity.desc" ,
+                query: searchFor,
                 page: 1
             }
         });
         dispatch({ type: STOP_LOADING });
         dispatch({type: SHOW_SUCCESS_MESSAGE, payload: response.data.successMessage,});
-        dispatch({type: GET_NOW_PLAYING,	payload: response.data.results,});
-
+        dispatch({type: GET_SEARCHED_MOVIES, payload: response.data.results,});
+        
+        console.log(response);
     } catch (err) {
-		console.log('getting mow playing movies api error: ', err);
+		console.log('getting Searched movies api error: ', err);
 		dispatch({ type: STOP_LOADING });
 		dispatch({
 			type: SHOW_ERROR_MESSAGE,
