@@ -3,9 +3,6 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import loadingReducer from './reducers/loadingReducers';
 import messageReducer from './reducers/messageReducers';
-import categoryReducer from './reducers/categoryReducers';
-import productReducer from './reducers/productReducers';
-import filterReducer from './reducers/filterReducers';
 import favoriteReducer from './reducers/favoriteReducers';
 import movieListReducer from './reducers/moviesReducers';
 // import searchedMoviesReducers from './reducers/moviesReducers';
@@ -13,9 +10,6 @@ import movieListReducer from './reducers/moviesReducers';
 const reducer = combineReducers({
 	loading: loadingReducer,
 	messages: messageReducer,
-	categories: categoryReducer,
-	products: productReducer,
-	filters: filterReducer,
 	favorite: favoriteReducer,
 	movieList : movieListReducer,
 });
