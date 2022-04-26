@@ -1,5 +1,4 @@
-import { GET_NOW_PLAYING } from "../constants/moviesConstants";
-import { GET_SEARCHED_MOVIES } from "../constants/moviesConstants";
+import { GET_NOW_PLAYING, GET_SEARCHED_MOVIES } from "../constants/moviesConstants";
 
 const INITIAL_STATE = {
   movieList: [],

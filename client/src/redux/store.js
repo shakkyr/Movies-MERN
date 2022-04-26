@@ -5,6 +5,7 @@ import loadingReducer from './reducers/loadingReducers';
 import messageReducer from './reducers/messageReducers';
 import favoriteReducer from './reducers/favoriteReducers';
 import movieListReducer from './reducers/moviesReducers';
+import singleMovieReducer from './reducers/singleMovieReducers'
 // import searchedMoviesReducers from './reducers/moviesReducers';
 
 const reducer = combineReducers({
@@ -12,6 +13,7 @@ const reducer = combineReducers({
 	messages: messageReducer,
 	favorite: favoriteReducer,
 	movieList : movieListReducer,
+	movieDetails : singleMovieReducer,
 });
 
 const initialState = {};
