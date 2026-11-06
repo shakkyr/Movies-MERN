@@ -5,7 +5,7 @@ import {GET_NOW_PLAYING,GET_SEARCHED_MOVIES} from '../constants/moviesConstants'
 
 
 
-const apiKey = 'a4999a28333d1147dbac0d104526337a';
+const apiKey = process.env.REACT_APP_TMDB_API_KEY; // set in .env
 const url = 'https://api.themoviedb.org/3';
 const nowPlayingUrl = `${url}/movie/now_playing`;
 const topratedUrl = `${url}/movie/top_rated`;
