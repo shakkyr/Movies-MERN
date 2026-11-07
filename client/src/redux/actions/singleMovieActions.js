@@ -4,7 +4,7 @@ import {SHOW_ERROR_MESSAGE,	SHOW_SUCCESS_MESSAGE,} from '../constants/messageCon
 import {GET_MOVIE_BY_ID} from '../constants/singleMovieConstants';
 
 
-const apiKey = 'a4999a28333d1147dbac0d104526337a';
+const apiKey = process.env.REACT_APP_TMDB_API_KEY; // set in .env
 const url = 'https://api.themoviedb.org/3';
 const movieUrl = `${url}/movie`;
 
